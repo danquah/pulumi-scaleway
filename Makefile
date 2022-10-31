@@ -17,6 +17,9 @@ TESTPARALLELISM := 10
 
 WORKING_DIR     := $(shell pwd)
 
+# Enable beta resources.
+export SCW_ENABLE_BETA := true
+
 .PHONY: development provider build_sdks build_nodejs build_dotnet build_go build_python
 
 development:: install_plugins provider lint_provider build_sdks build_java # Build the provider & SDKs for a development environment
